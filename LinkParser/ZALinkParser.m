@@ -256,7 +256,7 @@ NSInteger const maxRedirect = 2;
 }
 
 - (void)URLSession:(NSURLSession *)session dataTask:(NSURLSessionDataTask *)dataTask didReceiveResponse:(NSURLResponse *)response completionHandler:(void (^)(NSURLSessionResponseDisposition))completionHandler {
-    NSLog(@"check:: rêciveResponse");
+    NSLog(@"check:: receiveResponse");
     NSHTTPURLResponse *httpResponse = (NSHTTPURLResponse*)response;
     if ([httpResponse isKindOfClass:[NSHTTPURLResponse class]] && httpResponse.allHeaderFields && httpResponse.statusCode == 200) {
         if ([self checkValidHeader:httpResponse.allHeaderFields]) {
